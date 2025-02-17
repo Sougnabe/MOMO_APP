@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Sticky Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #0a1f44;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    color: #a8c7fa;
+}
+
+
+/* Adjust main content padding to account for the fixed header */
+main {
+    padding-top: 150px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Section Headings */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0a1f44;
+    margin: 40px auto 10px;
+}
+
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+/* Filters Section */
+#filters {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+/* Filters Layout */
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Individual Filter Group */
+.filter-group {
+    flex: 1;
+    min-width: 160px;
+    max-width: 200px;
+    text-align: left;
+}
+
+
+/* Labels */
+.filter-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+
+/* Inputs and Selects */
+#search, #type-filter, #start-date, #end-date {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+
+/* Ensure consistent height and spacing */
+#search, #type-filter, #start-date, #end-date {
+    height: 38px;
+}
+
+
+/* Buttons */
+#apply-filters, #reset-filters {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+#apply-filters {
+    background-color: #0a1f44;
+    color: white;
+}
+
+
+#apply-filters:hover {
+    background-color: #1c3a6b;
+    transform: translateY(-2px);
+}
+
+
+#reset-filters {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+
+#reset-filters:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+}
+
+
+/* Charts Section */
+.chart-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* Increase Chart Size */
+canvas {
+    width: 50% !important;
+    height: 50% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 auto;
+}
+
+
+/* Transaction Table */
+#transaction-table {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow-x: auto;
+}
+
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+th {
+    background-color: #0a1f44;
+    color: white;
+    font-weight: 600;
+}
+
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #filters, #charts, #transaction-table {
+        margin: 10px;
+        padding: 15px;
+    }
+
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+
+    .filters-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .filter-group {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* Adjust chart size for smaller screens */
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+
+    .chart-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
