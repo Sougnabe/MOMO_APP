@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MoMo Dashboard for analyzing and visualizing MTN MoMo transactions.">
+    <title>MoMo Dashboard</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <h1>MoMo Transaction Dashboard</h1>
+        <p>Analyze and visualize MTN MoMo transactions.</p>
+    </header>
+
+    <main id="main-content">
+        <div id="loading" class="loading-state" aria-live="polite">
+            <div class="spinner"></div>
+            <p>Loading data...</p>
+        </div>
+
+        <div id="error-message" class="error-message" aria-live="assertive">
+            <p>Failed to load data. Please try again later.</p>
+        </div>
+
+        <div id="success-message" class="success-message" aria-live="assertive">
+            <p>Data loaded successfully!</p>
+        </div>
+
+        <div id="no-data" class="no-data-state" aria-live="polite">
+            <p>No transactions found matching your filters.</p>
+        </div>
+
+        <section id="filters" aria-labelledby="filters-heading">
+            <h2 id="filters-heading">Transaction Filters</h2>
+
+            <div class="filters-container">
+                <div class="filter-group search-group">
+                    <label for="search">Search Transactions:</label>
+                    <input type="text" id="search" placeholder="Search transactions..." aria-label="Search transactions">
+                </div>
+
+                <div class="filter-group">
+                    <label for="type-filter">Filter by Type:</label>
+                    <select id="type-filter" aria-label="Filter by transaction type">
+                        <option value="all">All Types</option>
+                        <option value="incoming money">Incoming Money</option>
+                        <option value="payments to code holders">Payments to Code Holders</option>
+                        <option value="transfers to mobile numbers">Transfers to Mobile Numbers</option>
+                        <option value="bank deposits">Bank Deposits</option>
+                        <option value="airtime bill payments">Airtime Bill Payments</option>
+                        <option value="cash power bill payments">Cash Power Bill Payments</option>
+                        <option value="withdrawals from agents">Withdrawals from Agents</option>
+                        <option value="bank transfers">Bank Transfers</option>
+                        <option value="internet and voice bundle purchases">Internet and Voice Bundle Purchases</option>
+                        <option value="reversals">Reversals</option>
+                        <option value="failed transactions">Failed Transactions</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" aria-label="Start date">
+                </div>
+
+                <div class="filter-group">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" aria-label="End date">
+                </div>
+
+                <div class="filter-group apply-group">
+                    <button id="apply-filters" type="button" aria-label="Apply filters">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="reset-container">
+                <button id="reset-filters" type="button" aria-label="Reset filters">Reset Filters</button>
+            </div>
+        </section>
+
+        <section id="charts" aria-labelledby="charts-heading">
+            <h2 id="charts-heading">Transaction Insights</h2>
+            <div class="chart-container">
+                <h3>Transaction Volume by Type</h3>
+                <canvas id="bar-chart" aria-describedby="bar-chart-desc"></canvas>
+                <p id="bar-chart-desc" class="visually-hidden">Bar chart showing transaction volume by type.</p>
+            </div>
+            <div class="chart-container">
+                <h3>Transaction Distribution</h3>
+                <canvas id="pie-chart" aria-describedby="pie-chart-desc"></canvas>
+                <p id="pie-chart-desc" class="visually-hidden">Pie chart showing transaction distribution.</p>
+            </div>
+            <div class="chart-container">
+                <h3>Monthly Transaction Summary</h3>
+                <canvas id="line-chart" aria-describedby="line-chart-desc"></canvas>
+                <p id="line-chart-desc" class="visually-hidden">Line chart showing monthly transaction summary.</p>
+            </div>
+        </section>
+
+        <section id="transaction-table" aria-labelledby="table-heading">
+            <h2 id="table-heading">Transaction Details</h2>
+            <div class="table-wrapper">
+                <table>
+                    <caption>List of transactions processed through MTN MoMo</caption>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Amount (RWF)</th>
+                            <th>Sender</th>
+                            <th>Receiver</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <!-- Rows will be populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Developed by Group 29</p>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
+
