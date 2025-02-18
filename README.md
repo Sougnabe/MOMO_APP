@@ -40,24 +40,24 @@ MOMO APP is a full-stack application designed to process SMS data in XML format,
 
 **Project Structure**  
 
-
 MOMO_APP/
 ├── backend/
 │   ├── __pycache__/
 │   ├── database.py
 │   ├── data_processing.py
-│   ├── venv/  # Virtual environment (not typically committed)
+│   └── venv/           # Virtual environment (not typically committed)
 ├── database/
-│   ├── momo.db  # SQLite database file
+│   └── momo.db         # SQLite database file
 ├── frontend/
 │   ├── chart.js
 │   ├── index.html
 │   ├── script.js
-│   ├── styles.css
+│   └── styles.css
 ├── logs/
-│   ├── unprocessed_messages.log
+│   └── unprocessed_messages.log
 ├── transactions.json
-├── AUTHORS
+└── AUTHORS
+
 ## Installation
 
 **Clone the repository**
