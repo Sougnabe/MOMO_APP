@@ -102,5 +102,4 @@ pip install -r requirements.txt
    Generate exportable reports for further analysis.
 **Deployment**
 
-Our website was deployed here
-[momoapp.netlify.app] (https://momoapp.netlify.app)
+Our website was deployed here (https://momoapp.netlify.app)
