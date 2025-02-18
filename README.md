@@ -1,7 +1,7 @@
 # MOMO APP
 
 ## Overview
-MoMo APP is a full-stack application designed to process SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend dashboard for analysis and visualization. This project enables users to extract insights from mobile money transactions efficiently.
+Our MoMo APP is a full-stack application designed to process SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend dashboard for analysis and visualization. This project enables users to extract insights from mobile money transactions efficiently.
 
 ## Features
 - **Data Ingestion**: Extracts SMS data from XML format.
