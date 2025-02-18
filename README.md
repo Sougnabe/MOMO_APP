@@ -3,7 +3,7 @@
 ## Overview
 MOMO APP is a full-stack application designed to process SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend dashboard for analysis and visualization. This project enables users to extract insights from mobile money transactions efficiently, tracking cash inflows and outflows.
 
-🔗 Live Demo: momoapp.netlify.app  
+**Live Demo**: [momoapp.netlify.app](https://momoapp.netlify.app) 
 
 ## Table of Contents
 
@@ -58,65 +58,21 @@ MOMO_APP/
 ├── AUTHORS
 ## Installation
 
-Clone the repository
-
-bash
-Copy
-Edit
+**Clone the repository**
 git clone https://github.com/Sougnabe/MOMO_APP.git
 cd MOMO_APP
-Set up the backend
 
-bash
-Copy
-Edit
+**Set up the backend**
 cd backend
 python -m venv venv
-On Windows
-bash
-Copy
-Edit
+
+**On Windows**
 venv\Scripts\activate
-On macOS/Linux
-bash
-Copy
-Edit
+
+**On macOS/Linux**
 source venv/bin/activate
-Install dependencies
-bash
-Copy
-Edit
+
+**Install dependencies**
 pip install -r requirements.txt
-Set up the database
 
-Create an SQLite database.
-Update config.py with your database credentials (if needed).
-Run the backend server
 
-bash
-Copy
-Edit
-python app.py
-Set up the frontend
-
-bash
-Copy
-Edit
-cd ../frontend
-npm install
-npm start
-## Usage
-
-Upload an XML file containing MoMo transaction data.
-The system processes and categorizes the data.
-View transaction analytics on the dashboard.
-Export data insights as reports.
-## Deployment
-
-Frontend Deployment: The frontend is deployed on Netlify.
-
-Live URL: momoapp.netlify.app
-Backend Deployment: Can be deployed on Heroku, AWS Lambda, or Google Cloud Functions (or other hosting platforms).
-
-## Authors
-This project is developed and maintained by the MOMO APP team.
