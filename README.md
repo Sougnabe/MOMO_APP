@@ -72,8 +72,7 @@ MOMO_APP/
 ├── transactions.json
 
 └── AUTHORS
-
-## Installation
+**Steps to access the application locally**
 
 **Clone the repository**
 git clone https://github.com/Sougnabe/MOMO_APP.git
@@ -85,13 +84,13 @@ python -m venv venv
 
 **On Windows**
 venv\Scripts\activate
-
+pip install -r requirements.txt
 **On macOS/Linux**
 source venv/bin/activate
 
-**Install dependencies**
-pip install -r requirements.txt
-
+**Run the backend**
+**Start your server and go live python -m **
+http.server
 **Usage**
 
 1. Process and categorize MoMo transaction data.  
@@ -106,3 +105,5 @@ pip install -r requirements.txt
 Our website was deployed here (https://momoapp.netlify.app)
 
 **To use our website, click [this](https://momoapp.netlify.app)**
+
+   
