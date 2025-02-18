@@ -84,27 +84,39 @@ def categorize_sms(body):
     """
     Categorizes an SMS message into predefined transaction types or marks it as 'Other'.
     """
-    body_lower = body.lower().strip()
+    body_lower = body.lower().strip()  # This seems to be what you were trying to start with
     category = "Other"
     
-    # Handle specific cases
-    
-    # Payments to Code Holders: Look for "payment to [Name] [Code]"
-    if re.search(r'payment of \d+ rwf to [\w\s]+ \d+', body_lower):
-        category = "Payments to Code Holders"
-    
-    # Internet and Voice Bundle Purchases: Explicitly check for bundle-related keywords
-    elif any(keyword in body_lower for keyword in ["data bundle", "internet bundle", "voice bundle", "mb", "gb", "mins", "sms"]):
+    # Handle Bank Transfers first to prevent them from being caught by bundle conditions
+    if "imbank.bank" in body_lower:
+        category = "Bank Transfers"    
+
+    # Handle Internet and Voice Bundle Purchases (excluding imbank.bank)
+    elif any(keyword in body_lower for keyword in ["bundle", "bundles and packs", "data bundle", "internet bundle", "voice bundle", "mb", "gb", "mins", "sms", "mtn internet"]):
         category = "Internet and Voice Bundle Purchases"
     
-    # Airtime Bill Payments
-    elif "airtime" in body_lower:
+    # Handle Airtime Bill Payments
+    elif "to airtime with token" in body_lower:
         category = "Airtime Bill Payments"
     
-    # Cash Power Bill Payments
-    elif "cash power" in body_lower or "power bill" in body_lower:
+    # Handle Cash Power Bill Payments
+    elif "cash power with token" in body_lower:
         category = "Cash Power Bill Payments"
     
+    # Handle Payments to Code Holders, excluding failed/unsuccessful transactions
+    elif "payment of" in body_lower and "to" in body_lower and "completed" in body_lower:
+        if "failed" not in body_lower and "unsuccessful" not in body_lower and "transaction failed" not in body_lower:
+            if "airtime with token" not in body_lower and "mtn cash power with token" not in body_lower and "bundles and packs with token" not in body_lower:
+                category = "Payments to Code Holders"
+    
+    # Handle Transactions Initiated by Third Parties
+    elif "message from debit receiver" in body_lower or "ltd" in body_lower:
+        category = "Transactions Initiated by Third Parties"
+    
+    # Handle Transfers to Mobile Numbers
+    elif "transferred to" in body_lower or "sent to" in body_lower or "transfer to" in body_lower or "onafriq mauritius" in body_lower:
+        category = "Transfers to Mobile Numbers"
+ 
     # Match keywords to categories
     else:
         for keyword, cat in TRANSACTION_CATEGORIES.items():
