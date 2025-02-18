@@ -105,3 +105,14 @@ function showSuccess(message) {
     setTimeout(() => successMessageElement.style.display = 'none', 3000);
 }
 
+// Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+    searchInput.addEventListener('input', filterTransactions);
+    typeFilter.addEventListener('change', filterTransactions);
+    startDateFilter.addEventListener('change', filterTransactions);
+    endDateFilter.addEventListener('change', filterTransactions);
+    applyFiltersButton.addEventListener('click', filterTransactions);
+    resetFiltersButton.addEventListener('click', resetFilters);
+    
+    fetchTransactions();
+});
