@@ -100,6 +100,8 @@ pip install -r requirements.txt
    Access visual insights, summary charts, and detailed trends.
 3. Export data insights as reports.  
    Generate exportable reports for further analysis.
+
 **Deployment**
 
 Our website was deployed here (https://momoapp.netlify.app)
+**To use our website, click this  [this](https://momoapp.netlify.app) **
