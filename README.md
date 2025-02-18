@@ -103,4 +103,4 @@ pip install -r requirements.txt
 **Deployment**
 
 Our website was deployed here
-[momoapp.netlify.app (https://momoapp.netlify.app)
+[momoapp.netlify.app] (https://momoapp.netlify.app)
