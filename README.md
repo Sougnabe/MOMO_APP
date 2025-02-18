@@ -92,4 +92,15 @@ source venv/bin/activate
 **Install dependencies**
 pip install -r requirements.txt
 
+**Usage**
 
+1. Process and categorize MoMo transaction data.  
+   The system automatically reads and processes the data from the designated source.
+2. View transaction analytics on the dashboard.  
+   Access visual insights, summary charts, and detailed trends.
+3. Export data insights as reports.  
+   Generate exportable reports for further analysis.
+**Deployment**
+
+Our website was deployed here
+[momoapp.netlify.app (https://momoapp.netlify.app)
