@@ -19,12 +19,16 @@ Authors
 
 Data Ingestion
 Extracts SMS data from XML files and parses them into a structured format.
+
 Data Cleaning & Categorization
 Uses regex to parse transaction details and categorize them (e.g., deposits, withdrawals, transfers).
+
 Database Storage
 Stores cleaned data in an SQLite relational database for easy querying and analysis.
+
 Frontend Dashboard
 Provides transaction history visualization, monthly/weekly summaries, and other analytics using HTML, CSS, and JavaScript.
+
 Scalability
 Optimized for handling large datasets, ensuring quick processing and data retrieval.
 ## Tech Stack
