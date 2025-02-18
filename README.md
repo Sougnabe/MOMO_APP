@@ -9,6 +9,10 @@ MoMo APP is a full-stack application designed to process SMS data in XML format,
 - **Database Storage**: Stores structured data in a relational database.
 - **Frontend Dashboard**: Provides visual insights and analytics.
 - **Efficient Processing**: Optimized for handling large datasets.
+## Additional
+## User Authentication & Role Management
+- **Feature: Implement user authentication to allow different access levels (admin, user).
+- **Purpose: This can help secure sensitive transaction data and provide users with role-based access to different features (e.g., admins can upload and delete data, while regular users can only view analytics).
 
 ## Technologies Used
 - **Backend**: Python
