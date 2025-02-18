@@ -16,9 +16,6 @@ Designing a well-structured relational database for storing the processed data w
 
 While the frontend development was relatively straightforward, integrating the processed data and displaying it dynamically on the frontend proved to be more complex. Handling asynchronous requests in JavaScript, ensuring smooth rendering of the data, and maintaining synchronization between the database and the frontend were significant hurdles.
 
-5. Absent Team Members
-During the project, we faced challenges due to the absence of some team members. One member cited technical issues as the reason for their absence, which resulted in the rest of the team handling the workload independently.
-
 **How We Overcame These Challenges**
 
 1. Iterative Testing and Debugging for Parsing
