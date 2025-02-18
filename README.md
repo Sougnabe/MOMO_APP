@@ -17,19 +17,19 @@ Deployment
 Authors
 ## Features
 
-Data Ingestion
+**Data Ingestion:**
 Extracts SMS data from XML files and parses them into a structured format.
 
-Data Cleaning & Categorization
+**Data Cleaning & Categorization:**
 Uses regex to parse transaction details and categorize them (e.g., deposits, withdrawals, transfers).
 
-Database Storage
+**Database Storage:**
 Stores cleaned data in an SQLite relational database for easy querying and analysis.
 
-Frontend Dashboard
+**Frontend Dashboard:**
 Provides transaction history visualization, monthly/weekly summaries, and other analytics using HTML, CSS, and JavaScript.
 
-Scalability
+**Scalability:**
 Optimized for handling large datasets, ensuring quick processing and data retrieval.
 ## Tech Stack
 
@@ -40,9 +40,6 @@ Backend: Python scripts
 Data Processing: Regex for cleaning and categorization
 ## Project Structure
 
-pgsql
-Copy
-Edit
 MOMO_APP/
 ├── backend/
 │   ├── __pycache__/
