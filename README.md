@@ -33,11 +33,16 @@ Provides transaction history visualization, monthly/weekly summaries, and other 
 Optimized for handling large datasets, ensuring quick processing and data retrieval.
 ## Tech Stack
 
-Programming Language: Python
-Database: SQLite
-Frontend: HTML, CSS, JavaScript
-Backend: Python scripts
-Data Processing: Regex for cleaning and categorization
+**Programming Language:** Python
+
+**Database:** SQLite
+
+**Frontend:** HTML, CSS, JavaScript
+
+**Backend:** Python scripts
+
+**Data Processing:** Regex for cleaning and categorization
+
 ## Project Structure
 
 MOMO_APP/
