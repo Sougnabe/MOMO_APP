@@ -1,18 +1,44 @@
 # MOMO APP
 
 ## Overview
-Our MoMo APP is a full-stack application designed to process SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend dashboard for analysis and visualization. This project enables users to extract insights from mobile money transactions efficiently.
+A full-stack application designed to process SMS data in XML format, clean and categorize the data, store it in a relational database, and provide a frontend dashboard for analysis and visualization. This project enables users to extract insights from mobile money transactions efficiently, tracking cash inflows and outflows.
+Table of Contents
+Overview
+Features
+Tech Stack
+Project Structure
+Installation
+Usage
+Database Setup
+Deployment
+Authors
 
-## Features
-- **Data Ingestion**: Extracts SMS data from XML format.
-- **Data Cleaning & Categorization**: Parses and organizes transaction details.
-- **Database Storage**: Stores structured data in a relational database.
-- **Frontend Dashboard**: Provides visual insights and analytics.
-- **Efficient Processing**: Optimized for handling large datasets.
-## Additional
-## User Authentication & Role Management
-- **Feature**: Implement user authentication to allow different access levels (admin, user).
-- **Purpose**: This can help secure sensitive transaction data and provide users with role-based access to different features (e.g., admins can upload and delete data, while regular users can only view analytics).
+Overview
+MOMO Data Analysis processes XML-based SMS transaction data, applies regex for data cleaning, categorizes each transaction, and stores the results in an SQLite database. A frontend dashboard (using HTML/CSS/JavaScript) provides insightful visualizations and analytics, helping users understand their financial inflows and outflows at a glance.
+
+Features
+Data Ingestion
+
+Extracts SMS data from XML files and parses them into a structured format.
+Data Cleaning & Categorization
+
+Uses regex to parse transaction details and categorize them (e.g., deposits, withdrawals, transfers).
+Database Storage
+
+Stores cleaned data in a relational SQLite database for easy querying and analysis.
+Frontend Dashboard
+
+Visualizes transaction history, monthly/weekly summaries, and other analytics using HTML/CSS/JavaScript.
+Scalability
+
+Optimized for handling large datasets, ensuring quick processing and data retrieval.
+
+Tech Stack
+Programming Language: Python 
+Database: SQLite
+Frontend: HTML, CSS, JavaScript
+Backend: Python scripts 
+Data Processing: Regex for cleaning/categorization
 
  ## Data Import Options
 - **Feature**: Provide alternative ways to ingest data, such as uploading CSV files or connecting to APIs that provide mobile money transaction data.
