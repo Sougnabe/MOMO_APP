@@ -84,7 +84,7 @@ def categorize_sms(body):
     """
     Categorizes an SMS message into predefined transaction types or marks it as 'Other'.
     """
-    body_lower = body.lower().strip()  # This seems to be what you were trying to start with
+    body_lower = body.lower().strip()  
     category = "Other"
     
     # Handle Bank Transfers first to prevent them from being caught by bundle conditions
