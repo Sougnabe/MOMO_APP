@@ -1,0 +1,43 @@
+**Challenges Faced**
+
+1. Parsing Transactions Data
+
+Parsing the SMS transaction data from XML format was a significant challenge. Initially, we struggled with understanding the structure of the data and how best to extract the relevant information. Handling different transaction formats and ensuring data consistency required multiple iterations and debugging sessions.
+
+2. Data Manipulation and Error Handling
+
+Once we successfully parsed the data, the next hurdle was efficiently manipulating and categorizing it. The varying formats of transactions made it difficult to establish a universal method for classification. Additionally, unexpected errors such as missing fields and inconsistencies in data structure required implementing robust error-handling mechanisms to prevent system crashes.
+
+3. Database Management
+
+Designing a well-structured relational database for storing the processed data was another major challenge. Ensuring data integrity, optimizing queries for performance, and maintaining relationships between different tables took considerable effort.
+
+4. Displaying Results on the Website
+
+While the frontend development was relatively straightforward, integrating the processed data and displaying it dynamically on the frontend proved to be more complex. Handling asynchronous requests in JavaScript, ensuring smooth rendering of the data, and maintaining synchronization between the database and the frontend were significant hurdles.
+
+5. Absent Team Members
+During the project, we faced challenges due to the absence of some team members. One member cited technical issues as the reason for their absence, which resulted in the rest of the team handling the workload independently.
+
+**How We Overcame These Challenges**
+
+1. Iterative Testing and Debugging for Parsing
+
+To address parsing difficulties, we experimented with different approaches, including XML tree traversal and regex-based extraction. Through iterative testing and debugging, we refined our methods to achieve a more efficient and accurate parsing mechanism.
+
+2. Implementing Robust Error Handling
+
+To manage data inconsistencies, we implemented strong error-handling mechanisms, including exception handling and logging. This allowed us to detect and resolve issues early, preventing system failures and improving overall stability.
+
+3. Utilizing AI for Debugging and Learning
+
+We leveraged AI-powered tools to assist us in understanding complex parts of the project. These tools provided explanations, suggested solutions, and helped us debug errors effectively. This significantly accelerated our learning process and allowed us to overcome technical roadblocks.
+
+4. Enhancing Frontend-Backend Communication
+
+To ensure seamless data display on the frontend, we optimized our API endpoints for efficient data retrieval. We also utilized JavaScript frameworks to handle asynchronous operations effectively, enabling a smooth and responsive user experience.
+
+**Conclusion**
+
+Despite the challenges faced, our team successfully overcame each obstacle through persistence, research, and continuous testing. The experience gained in data processing, database optimization, and frontend integration has significantly strengthened our development skills and problem-solving approach.
+
